@@ -6,11 +6,23 @@
 
 body {
     font-family: cursive;
+    height: 100vh;
 }
 
 img {
     display: block;
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER  */
@@ -19,26 +31,59 @@ header {
     display: flex;
     background: rgb(67, 56, 120);
     color: white;
-    padding: 20px;
+    padding: 15px 30px;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 header > nav {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
-header > nav > p {
+header > nav > p, .user-profile > img {
     cursor: pointer;
 }
+
+/* PROFILE MENU */
+
+
+.profile-menu {
+    position: absolute;
+    background: rgb(126, 96, 191);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 5px;
+    width: 200px;
+    right: 30px;
+    transform: translateY(8px);
+}
+
+.profile-menu span {
+    font-size: 1.25rem;
+}
+
+.profile-menu p {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.95rem;
+}
+
+.profile-menu p:last-child {
+    border: none;
+}
+
 
 /* ITEM CARD  */
 
 .item-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .item-card-header {
@@ -89,14 +134,25 @@ header > nav > p {
     gap: 5px;
 }
 
-.item-seller > img {
+.item-seller > img, .user-profile > img {
     width: 30px;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
 
+.item-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.item-price > * {
+    font-size: 0.7rem;
+}
+
 .item-price > span {
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .item-card-footer {
@@ -122,5 +178,25 @@ header > nav > p {
 /* MAIN  */
 
 main {
-    padding: 50px 200px;
+    padding: 50px 15vw;
+    flex-grow: 1;
+}
+
+/* FOOTER  */
+
+footer {
+    background: rgb(67, 56, 120);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer span {
+    font-family: sans-serif;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
