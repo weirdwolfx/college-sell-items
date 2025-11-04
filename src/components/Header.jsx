@@ -1,10 +1,10 @@
-export default function Header() {
+export default function Header(props) {
     return (
         <header>
             <h1>website-name</h1>
             <nav>
-                <p>Browse</p>
-                <p>Lost & Found</p>
+                <p onClick={() => props.changeView('browse')}>Browse</p>
+                <p onClick={() => props.changeView('lostandfound')}>Lost & Found</p>
             </nav>
         </header>
     )

@@ -1,10 +1,11 @@
-import SellItemCard from "./sell-item"
+import Browse from "./Browse"
+import LostAndFound from "./LostAndFound"
 
-export default function Main() {
+export default function Main(props) {
     return (
         <main>
-            <p>This is the main component</p>
-            <SellItemCard />
+            {props.view == 'browse' && <Browse />}
+            {props.view == 'lostandfound' && <LostAndFound />}
         </main>
     )
 }

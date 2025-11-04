@@ -29,6 +29,10 @@ header > nav {
     gap: 15px;
 }
 
+header > nav > p {
+    cursor: pointer;
+}
+
 /* ITEM CARD  */
 
 .item-card {
@@ -37,3 +41,5 @@ header > nav {
     border-radius: 6px;
     padding: 10px;
 }
+
+/* MAIN  */
