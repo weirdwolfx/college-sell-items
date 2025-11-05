@@ -1,19 +1,20 @@
-import SellItemCard from "./sell-item"
+import SellItemCard from "../components/ItemCard"
 
-import data from "../data/item-sell-data"
+import data from "../data/item-lost-data"
 
-export default function Browse() {
+export default function LostAndFound() {
 
     const itemElements = data.map(item => {
         return (
             <SellItemCard 
+                key={item.id}
                 profilePic={item.profileImg}
                 userName={item.userName}
                 itemDate={item.date}
                 img={item.itemImg}
                 itemName={item.itemName}
                 itemDescription={item.itemDescription}
-                price={item.price}
+                price={null}
             />
         )
     })

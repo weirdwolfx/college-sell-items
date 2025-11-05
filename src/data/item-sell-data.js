@@ -1,5 +1,6 @@
 const data = [
     {
+        id: 1,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -9,6 +10,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 2,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -18,6 +20,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 3,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -27,6 +30,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 4,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -36,6 +40,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 5,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -45,6 +50,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 6,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -54,6 +60,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 7,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 
@@ -63,6 +70,7 @@ const data = [
         price: "10,000",
     },
     {
+        id: 8,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
         userName: "keskarsir",
         date: "25 Jan, 2025", 

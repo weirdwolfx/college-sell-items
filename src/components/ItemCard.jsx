@@ -11,8 +11,10 @@ export default function SellItemCard(props) {
             <div className="item-card-content">
                 <img src={props.img} alt="placeholder image" />
                 <h3 className="item-name">{props.itemName}</h3>
-                <p className="item-description">{props.itemDescription}</p>
-                <p className="item-price"><span>Price:</span> {props.price}</p>
+                <p className="item-description">{props.itemDescription}</p> 
+                {
+                    props.price && <p className="item-price"><span>Price:</span> {props.price}</p>
+                }
             </div>
             <div className="item-card-footer">
                 <span className="material-symbols-outlined" aria-label="message seller">chat</span>

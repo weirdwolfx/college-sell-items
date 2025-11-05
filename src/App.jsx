@@ -1,18 +1,22 @@
 import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Header from "./components/Header"
-import Main from "./components/Main"
+import Home from "./pages/Home"
 import Footer from "./components/Footer"
+import UserItem from "./pages/User-Item"
 
 export default function App() {
-    
-    const [view, setView] = React.useState('browse')
 
     return (
-        <>
-            <Header changeView={setView} />
-            <Main view={view} />
+        <BrowserRouter>
+            <Header />  
+            <Routes>
+                <Route path="/:section" element={<Home />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/profile/items" element={<UserItem />} />
+            </Routes>
             <Footer />
-        </>
+        </BrowserRouter>
     )
 }
