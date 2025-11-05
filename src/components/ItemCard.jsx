@@ -1,4 +1,4 @@
-export default function SellItemCard(props) {
+export default function ItemCard(props) {
     return (
         <section className="item-card">
             <div className="item-card-header">

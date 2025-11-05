@@ -1,4 +1,4 @@
-import SellItemCard from "../components/ItemCard"
+import ItemCard from "../components/ItemCard"
 
 import data from "../data/item-lost-data"
 
@@ -6,7 +6,7 @@ export default function LostAndFound() {
 
     const itemElements = data.map(item => {
         return (
-            <SellItemCard 
+            <ItemCard 
                 key={item.id}
                 profilePic={item.profileImg}
                 userName={item.userName}

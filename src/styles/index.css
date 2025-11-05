@@ -14,6 +14,10 @@ img {
     max-width: 100%;
 }
 
+button {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -83,8 +87,9 @@ header > nav > p, .user-profile > img {
 
 .item-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .item-card-header {
@@ -100,6 +105,7 @@ header > nav > p, .user-profile > img {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 350px;
 }
 
 .item-price > span, .item-card .material-symbols-outlined, .item-name {
@@ -181,6 +187,9 @@ header > nav > p, .user-profile > img {
 main {
     padding: 100px 15vw;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* FOOTER  */
@@ -200,4 +209,56 @@ footer span {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* ITEM FORM  */
+
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 4px lightgray;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transform-origin: center;
+    gap: 10px;
+    background: white;
+}
+
+.add-item-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.add-item-form label {
+    font-size: 0.9rem;
+}
+
+.add-item-form input, .add-item-form textarea {
+    border: none;
+    background-color: rgb(211, 211, 211, 0.5);
+    border-radius: 16px;
+    padding: 0.5em 1em;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.add-item-form button, .add-item-button {
+    background-color: rgb(67, 56, 120);
+    color: white;
+    padding: 0.3em 1em;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.add-item-button {
+    margin-inline: auto;
+    margin-bottom: 30px;
 }
