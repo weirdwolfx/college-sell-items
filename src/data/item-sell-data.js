@@ -2,7 +2,7 @@ const data = [
     {
         id: 1,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -12,7 +12,7 @@ const data = [
     {
         id: 2,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -22,7 +22,7 @@ const data = [
     {
         id: 3,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -32,7 +32,7 @@ const data = [
     {
         id: 4,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -42,7 +42,7 @@ const data = [
     {
         id: 5,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -52,7 +52,7 @@ const data = [
     {
         id: 6,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -62,7 +62,7 @@ const data = [
     {
         id: 7,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
@@ -72,7 +72,7 @@ const data = [
     {
         id: 8,
         profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "keskarsir",
+        userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
         itemName: "Cycle",
