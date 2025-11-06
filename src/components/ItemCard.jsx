@@ -17,8 +17,8 @@ export default function ItemCard(props) {
                 }
             </div>
             <div className="item-card-footer">
-                <span className="material-symbols-outlined" aria-label="message seller">chat</span>
-                <span className="material-symbols-outlined" aria-label="bookmark item">bookmark</span>
+                <span className="material-symbols-outlined pointer-accessible" aria-label="message seller">chat</span>
+                <span className="material-symbols-outlined pointer-accessible" aria-label="bookmark item">bookmark</span>
             </div>
         </section>
     )

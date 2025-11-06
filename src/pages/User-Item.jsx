@@ -64,7 +64,7 @@ export default function UserItem(props) {
                     <form action={createItem} className="add-item-form">
                         <div>
                             <label htmlFor="item-name-input">Item name(*)</label>
-                            <input type="text" id="item-name" name="item-name" value="Attendance" required/>
+                            <input type="text" id="item-name-input" name="item-name" value="Attendance" required/>
                         </div>
 
                         <div>

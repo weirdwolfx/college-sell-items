@@ -9,7 +9,9 @@ export default function ProfileMenu() {
             </Link>
             <p><span className="material-symbols-outlined">bookmarks</span>Saved</p>
             <p><span className="material-symbols-outlined">settings</span>Settings</p>
-            <p><span className="material-symbols-outlined">logout</span>Sign out</p>
+            <Link to="/login" >
+                <p><span className="material-symbols-outlined">logout</span>Sign out</p>
+            </Link>
         </nav>
     )
 }

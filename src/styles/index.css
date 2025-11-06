@@ -32,6 +32,10 @@ div#root {
     flex-direction: column;
 }
 
+.pointer-accessible {
+    cursor: pointer;
+}
+
 /* MAIN  */
 
 main {
@@ -50,6 +54,9 @@ main.login-page {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('../assets/login-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* HEADER  */
@@ -68,10 +75,6 @@ header > nav {
     display: flex;
     align-items: center;
     gap: 35px;
-}
-
-header > nav > p, .user-profile > img {
-    cursor: pointer;
 }
 
 header .user-profile {
@@ -108,7 +111,7 @@ header .user-profile {
     border-bottom: 0.5px solid rgb(255,255,255, 0.2);
 }
 
-.profile-menu > p:last-child {
+.profile-menu > *:last-child > p {
     border: none;
 }
 
@@ -200,10 +203,6 @@ header .user-profile {
     gap: 10px;
 }
 
-.item-card-footer > span {
-    cursor: pointer;
-}
-
 .item-seller > p {
     font-size: 1rem;
 }
@@ -261,6 +260,10 @@ footer a:hover {
     gap: 8px;
 }
 
+.add-item-form label, .login-form label {
+    align-self: self-start;
+}
+
 .add-item-form label {
     font-size: 0.9rem;
 }
@@ -282,6 +285,7 @@ footer a:hover {
     padding: 10px 30px;
     border-radius: 10px;
     font-size: 1rem;
+    border: none;
 }
 
 .add-item-form button {
@@ -297,6 +301,9 @@ input[type='file'] {
     display: none;
 }
 
+input::placeholder {
+    color: rgb(185, 185, 185);
+}
 
 
 /* BACKDROP  */
@@ -321,14 +328,24 @@ input[type='file'] {
     object-fit: cover;
 }
 
-.login-form {
-    box-shadow: 0px 0px 5px lightgray;
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .login-button {
     flex-grow: 1;
+    max-height: 40px;
 }
 
 .login-button-container {
     display: flex;
+}
+
+.file-input > label {
+    display: flex;
+    align-items: center;
 }
