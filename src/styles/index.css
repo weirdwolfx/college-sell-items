@@ -317,17 +317,6 @@ input::placeholder {
 
 /* LOGIN PAGE  */
 
-.login-img-container {
-    width: 400px;
-    position: absolute;
-    inset: 0 auto 0 0;
-}
-
-.login-img-container > img {
-    height: 100%;
-    object-fit: cover;
-}
-
 .glass {
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);

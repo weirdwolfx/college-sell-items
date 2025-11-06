@@ -41,8 +41,8 @@ export default function UserItem(props) {
         const filePath = URL.createObjectURL(file)
         const item = {
             id: props.items.length,
-            profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-            userName: "keskarsir",
+            profileImg: props.user.profilePic,
+            userName: props.user.username,
             date: getTodayDate(),
             itemImg: filePath,
             itemName: formData.get('item-name'),
@@ -56,7 +56,7 @@ export default function UserItem(props) {
 
     return (
         <>
-            <Header />
+            <Header user={props.user} />
             <main className="user-item-page">
                 <button className="add-item-button" type="button" onClick={toggleForm} >+ Add Item</button>
                 {

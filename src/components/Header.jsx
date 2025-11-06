@@ -22,8 +22,13 @@ export default function Header({ user }) {
                     <p>Lost & Found</p>
                 </Link>
                 <div className="user-profile">
-                    <p>@Keskar-sir</p>
-                    <img className="pointer-accessible" onClick={openProfile} src="https://www.shutterstock.com/image-vector/cute-cat-wear-dino-costume-600nw-2457633459.jpg" alt="profile pic" />
+                    <p>{user.username}</p>
+                    <img 
+                        className="pointer-accessible" 
+                        onClick={openProfile} 
+                        src={user.profilePic} 
+                        alt="profile pic" 
+                    />
                     {isProfileOpen && <ProfileMenu />}
                 </div>
             </nav>

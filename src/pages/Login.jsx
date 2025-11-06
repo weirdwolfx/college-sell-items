@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom"
 
-import LoginImg from "../assets/login-img.jpg"
-
 export default function Login(props) {
 
     const navigate = useNavigate()
@@ -14,7 +12,7 @@ export default function Login(props) {
             password: formData.get('password'),
             profilePic: URL.createObjectURL(picfile)
         })
-
+        
         navigate('/browse')
     }
 
