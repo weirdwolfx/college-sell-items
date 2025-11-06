@@ -1,6 +1,8 @@
 import React from "react"
 
 import ItemCard from "../components/ItemCard"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 export default function UserItem(props) {
 
@@ -22,7 +24,6 @@ export default function UserItem(props) {
     })
 
     function toggleForm() {
-        console.log("Button pressed")
         setFormShow(prevFormShow => !prevFormShow)
     }
 
@@ -36,13 +37,14 @@ export default function UserItem(props) {
     }
 
     function createItem(formData) {
-        console.log("Form data processing")
+        const file = formData.get('item-img')
+        const filePath = URL.createObjectURL(file)
         const item = {
             id: props.items.length,
             profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
             userName: "keskarsir",
             date: getTodayDate(),
-            itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
+            itemImg: filePath,
             itemName: formData.get('item-name'),
             itemDescription: formData.get('item-description'),
             price: formData.get('item-price'),
@@ -53,35 +55,48 @@ export default function UserItem(props) {
     }
 
     return (
-        <main>
-            <button className="add-item-button" type="button" onClick={toggleForm} >+ Add Item</button>
-            {
-                formShow &&
-                <form action={createItem} className="add-item-form">
-                    <div>
-                        <label htmlFor="item-name-input">Item name</label>
-                        <input type="text" id="item-name" name="item-name"/>
-                    </div>
+        <>
+            <Header />
+            <main className="user-item-page">
+                <button className="add-item-button" type="button" onClick={toggleForm} >+ Add Item</button>
+                {
+                    formShow &&
+                    <form action={createItem} className="add-item-form">
+                        <div>
+                            <label htmlFor="item-name-input">Item name(*)</label>
+                            <input type="text" id="item-name" name="item-name" value="Attendance" required/>
+                        </div>
 
-                    <div>
-                        <label htmlFor="item-description-input">Item description(5-50 characters)</label>
-                        <textarea name="item-description" id="item-description-input"></textarea>
-                    </div>
+                        <div>
+                            <label htmlFor="item-description-input">Item description(0-50 characters)</label>
+                            <textarea name="item-description" id="item-description-input"></textarea>
+                        </div>
 
-                    <div>
-                        <label htmlFor="item-price-input">Price</label>
-                        <input type="number" id="item-price-input" name="item-price" />
-                    </div>
+                        <div>
+                            <label htmlFor="item-price-input">Price(*)</label>
+                            <input type="number" id="item-price-input" name="item-price" value="1200" required/>
+                        </div>
 
-                    <button>Submit</button>
-                </form>
-            }
-            {
-                formShow && <div className="dark-backdrop"></div>
-            }
-            <section className="item-card-container">
-                {itemElements}
-            </section>
-        </main>
+                        <label htmlFor="item-img-input">Upload image</label>
+                        <input 
+                            type="file"
+                            accept="image/*" 
+                            id="item-img-input"
+                            name="item-img"
+                            required
+                        />
+
+                        <button>Submit</button>
+                    </form>
+                }
+                {
+                    formShow && <div className="dark-backdrop"></div>
+                }
+                <section className="item-card-container">
+                    {itemElements}
+                </section>
+            </main>
+            <Footer />
+        </>
     )
 }

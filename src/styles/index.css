@@ -5,13 +5,15 @@
 }
 
 body {
-    font-family: cursive;
-    height: 100vh;
+    font-family: "Nunito sans", "Inter", 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    min-height: 100vh;
+    height: 100%;
 }
 
 img {
     display: block;
     max-width: 100%;
+    max-height: 100%;
 }
 
 button {
@@ -24,9 +26,30 @@ a {
 }
 
 div#root {
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+/* MAIN  */
+
+main {
+    flex-grow: 1;
+    height: 100%;
+}
+
+main.user-item-page, main.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 15vw;
+}
+
+main.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HEADER  */
@@ -44,11 +67,18 @@ header {
 header > nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 35px;
 }
 
 header > nav > p, .user-profile > img {
     cursor: pointer;
+}
+
+header .user-profile {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* PROFILE MENU */
@@ -61,8 +91,8 @@ header > nav > p, .user-profile > img {
     border-radius: 8px;
     padding: 10px 5px;
     width: 250px;
+    top: calc(100% - 10px);
     right: 40px;
-    transform: translateY(8px);
 }
 
 .profile-menu span {
@@ -88,7 +118,7 @@ header > nav > p, .user-profile > img {
 .item-card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-    gap: 20px;
+    gap: 40px;
     width: 100%;
 }
 
@@ -121,6 +151,7 @@ header > nav > p, .user-profile > img {
 .item-card-content > img {
     border-radius: 10px;
     margin-bottom: 10px;
+    height: 200px;
 }
 
 .item-card-content .item-description {
@@ -182,16 +213,6 @@ header > nav > p, .user-profile > img {
     letter-spacing: 0.01px;
 }
 
-/* MAIN  */
-
-main {
-    padding: 100px 15vw;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* FOOTER  */
 
 footer {
@@ -214,54 +235,68 @@ footer a:hover {
 /* ITEM FORM  */
 
 .add-item-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
     position: fixed;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    padding: 30px 20px;
-    border-radius: 12px;
-    transform-origin: center;
-    gap: 10px;
     background: white;
     z-index: 10;
+    transform-origin: center;
 }
 
-.add-item-form > div {
+.add-item-form, .login-form {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    padding: 30px;
+    border-radius: 12px;
+    gap: 20px;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+}
+
+.add-item-form > div, .login-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .add-item-form label {
     font-size: 0.9rem;
 }
 
-.add-item-form input, .add-item-form textarea {
-    border: none;
-    background-color: rgb(211, 211, 211, 0.5);
-    border-radius: 16px;
-    padding: 0.5em 1em;
+.add-item-form input, .add-item-form textarea, .login-form input {
+    border: 1px solid #dfdfe0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5em 0.7em;
     flex-grow: 1;
     font-size: 1rem;
-    color: var(--text-color);
+    color: #4a4a4a;
 }
 
-.add-item-form button, .add-item-button {
+.add-item-form button, .add-item-button, .login-button {
+    text-align: center;
     background-color: rgb(67, 56, 120);
     color: white;
-    padding: 0.3em 1em;
+    padding: 10px 30px;
     border-radius: 10px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 1rem;
+}
+
+.add-item-form button {
+    flex-grow: 1;
 }
 
 .add-item-button {
     margin-inline: auto;
     margin-bottom: 30px;
 }
+
+input[type='file'] {
+    display: none;
+}
+
 
 
 /* BACKDROP  */
@@ -271,4 +306,29 @@ footer a:hover {
     inset: 0;
     background: rgb(0, 0, 0, 0.4);
     z-index: 0;
+}
+
+/* LOGIN PAGE  */
+
+.login-img-container {
+    width: 400px;
+    position: absolute;
+    inset: 0 auto 0 0;
+}
+
+.login-img-container > img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-form {
+    box-shadow: 0px 0px 5px lightgray;
+}
+
+.login-button {
+    flex-grow: 1;
+}
+
+.login-button-container {
+    display: flex;
 }

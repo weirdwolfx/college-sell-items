@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import ProfileMenu from "./ProfileMenu"
 
-export default function Header() {
+export default function Header({ user }) {
 
     const [isProfileOpen, setIsProfileOpen] = React.useState(false)
 
@@ -22,7 +22,8 @@ export default function Header() {
                     <p>Lost & Found</p>
                 </Link>
                 <div className="user-profile">
-                    <img onClick={openProfile} src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="profile pic" />
+                    <p>@Keskar-sir</p>
+                    <img onClick={openProfile} src="https://www.shutterstock.com/image-vector/cute-cat-wear-dino-costume-600nw-2457633459.jpg" alt="profile pic" />
                     {isProfileOpen && <ProfileMenu />}
                 </div>
             </nav>

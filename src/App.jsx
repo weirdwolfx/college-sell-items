@@ -1,26 +1,30 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Header from "./components/Header"
 import Home from "./pages/Home"
-import Footer from "./components/Footer"
 import UserItem from "./pages/User-Item"
+import Login from "./pages/Login"
 
 export default function App() {
 
     const [userItems, setUserItems] = React.useState([])
+    const [user, setUser] = React.useState({
+        username: '',
+        email: '',
+        password: '',
+        profilePic: '',
+    })
 
     return (
-        <BrowserRouter>
-            <Header />  
+        <BrowserRouter> 
             <Routes>
-                <Route path="/:section" element={<Home />} />
+                <Route path="/login" element={<Login user={user} setUser={setUser} />} />
+                <Route path="/:section" element={<Home user={user} />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/profile/items" element={
                     <UserItem items={userItems} setItems={setUserItems} />
                 } />
             </Routes>
-            <Footer />
         </BrowserRouter>
     )
 }
