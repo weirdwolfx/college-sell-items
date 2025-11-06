@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
+        profileImg: "https://www.shutterstock.com/image-vector/cute-cat-wear-dino-costume-600nw-2457633459.jpg",
         userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
@@ -11,7 +11,7 @@ const data = [
     },
     {
         id: 2,
-        profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
+        profileImg: "https://static.vecteezy.com/system/resources/previews/055/749/514/non_2x/cute-turtle-sleeping-cartoon-icon-illustration-animal-nature-icon-concept-isolated-vector.jpg",
         userName: "@JohnDoe",
         date: "25 Jan, 2025", 
         itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
@@ -49,36 +49,6 @@ const data = [
         itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
         price: "10,000",
     },
-    {
-        id: 6,
-        profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "@JohnDoe",
-        date: "25 Jan, 2025", 
-        itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
-        itemName: "Cycle",
-        itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
-    },
-    {
-        id: 7,
-        profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "@JohnDoe",
-        date: "25 Jan, 2025", 
-        itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
-        itemName: "Cycle",
-        itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
-    },
-    {
-        id: 8,
-        profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
-        userName: "@JohnDoe",
-        date: "25 Jan, 2025", 
-        itemImg: "https://investkerala2025.kerala.gov.in/assets/img/jpg/image-placeholder.jpg",
-        itemName: "Cycle",
-        itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
-    }
 ]
 
 export default data

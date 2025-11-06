@@ -2,12 +2,11 @@ import React from "react"
 
 import ItemCard from "../components/ItemCard"
 
-export default function UserItem() {
+export default function UserItem(props) {
 
-    const [userItems, setUserItems] = React.useState([])
     const [formShow, setFormShow] = React.useState(false)
 
-    const itemElements = userItems.map(item => {
+    const itemElements = props.items.map(item => {
         return (
             <ItemCard 
                 key={item.id}
@@ -22,7 +21,8 @@ export default function UserItem() {
         )
     })
 
-    function displayForm() {
+    function toggleForm() {
+        console.log("Button pressed")
         setFormShow(prevFormShow => !prevFormShow)
     }
 
@@ -36,8 +36,9 @@ export default function UserItem() {
     }
 
     function createItem(formData) {
+        console.log("Form data processing")
         const item = {
-            id: userItems.length,
+            id: props.items.length,
             profileImg: "https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg",
             userName: "keskarsir",
             date: getTodayDate(),
@@ -47,12 +48,13 @@ export default function UserItem() {
             price: formData.get('item-price'),
         }
 
-        setUserItems(prevUserItems => [...prevUserItems, item])
+        props.setItems(prevUserItems => [...prevUserItems, item])
+        toggleForm()
     }
 
     return (
         <main>
-            <button className="add-item-button" type="button" onClick={displayForm} >+ Add Item</button>
+            <button className="add-item-button" type="button" onClick={toggleForm} >+ Add Item</button>
             {
                 formShow &&
                 <form action={createItem} className="add-item-form">
@@ -73,6 +75,9 @@ export default function UserItem() {
 
                     <button>Submit</button>
                 </form>
+            }
+            {
+                formShow && <div className="dark-backdrop"></div>
             }
             <section className="item-card-container">
                 {itemElements}

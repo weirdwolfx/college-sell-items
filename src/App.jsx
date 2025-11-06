@@ -8,13 +8,17 @@ import UserItem from "./pages/User-Item"
 
 export default function App() {
 
+    const [userItems, setUserItems] = React.useState([])
+
     return (
         <BrowserRouter>
             <Header />  
             <Routes>
                 <Route path="/:section" element={<Home />} />
                 <Route path="/" element={<Home />} />
-                <Route path="/profile/items" element={<UserItem />} />
+                <Route path="/profile/items" element={
+                    <UserItem items={userItems} setItems={setUserItems} />
+                } />
             </Routes>
             <Footer />
         </BrowserRouter>

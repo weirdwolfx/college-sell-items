@@ -221,12 +221,12 @@ footer a:hover {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 4px lightgray;
     padding: 30px 20px;
     border-radius: 12px;
     transform-origin: center;
     gap: 10px;
     background: white;
+    z-index: 10;
 }
 
 .add-item-form > div {
@@ -261,4 +261,14 @@ footer a:hover {
 .add-item-button {
     margin-inline: auto;
     margin-bottom: 30px;
+}
+
+
+/* BACKDROP  */
+
+.dark-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.4);
+    z-index: 0;
 }
