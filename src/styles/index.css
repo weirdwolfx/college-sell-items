@@ -268,7 +268,7 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
-.add-item-form input, .add-item-form textarea, .login-form input {
+.add-item-form input, .add-item-form textarea {
     border: 1px solid #dfdfe0;
     background-color: white;
     border-radius: 10px;
@@ -328,6 +328,31 @@ input::placeholder {
 .login-button {
     flex-grow: 1;
     max-height: 40px;
+}
+
+.login-form label {
+    color: #2b2b2b;
+}
+
+.login-form input::placeholder {
+    color: #d2c3ff;
+}
+
+.login-form input:focus {
+    border: 0.5px solid #6b46c1;
+    box-shadow: 0px 0px 3px #6b46c1;
+    border-radius: 6px;
+}
+
+.login-form input {
+    outline: none;
+    border: none;
+    border-bottom: 1.5px black solid;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5em 0.7em;
+    flex-grow: 1;
+    font-size: 1rem;
 }
 
 .login-button-container {
