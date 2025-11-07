@@ -132,13 +132,15 @@ header .user-profile {
 }
 
 .item-card {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 15px;
     box-shadow: 0px 0px 4px darkgray;
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 350px;
+    height: 450px;
+    position: relative;
 }
 
 .item-price > span, .item-card .material-symbols-outlined, .item-name {
@@ -148,13 +150,16 @@ header .user-profile {
 .item-card-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .item-card-content > img {
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 10px;
     height: 200px;
+    outline: 1px solid #dfdfe0;
 }
 
 .item-card-content .item-description {
@@ -185,6 +190,8 @@ header .user-profile {
     display: flex;
     align-items: flex-end;
     gap: 4px;
+    font-size: 1.08rem;
+    letter-spacing: 1.5px;
 }
 
 .item-price > * {
@@ -197,6 +204,8 @@ header .user-profile {
 }
 
 .item-card-footer {
+    position: absolute;
+    inset: auto 15px 15px 15px;
     margin-left: auto;
     display: flex;
     justify-content: end;
@@ -211,6 +220,7 @@ header .user-profile {
     font-size: 0.8rem;
     letter-spacing: 0.01px;
 }
+
 
 /* FOOTER  */
 
@@ -275,6 +285,12 @@ footer a:hover {
     flex-grow: 1;
     font-size: 1rem;
     color: #4a4a4a;
+}
+
+.add-item-form textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 200px;
 }
 
 .add-item-form button, .add-item-button, .login-button {

@@ -7,7 +7,7 @@ const data = [
         itemImg: "https://images.offerup.com/tLstWvZrcLrUe8n5zjxxUMHAWIU=/1920x1440/fa9f/fa9f7fa20ae84ddba161500c34e2c379.jpg",
         itemName: "Cycle",
         itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
+        price: "6,000",
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const data = [
         itemImg: "https://tiimg.tistatic.com/fp/1/004/817/1-amp-mobile-charger-328.jpg",
         itemName: "Mobile Charger",
         itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
+        price: "300",
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const data = [
         itemImg: "https://thumbs.dreamstime.com/b/attendance-speech-bubble-white-background-vector-illustration-141014253.jpg",
         itemName: "Attendance",
         itemDescription: "I have used this cycle for 3-4 years, well-maintained and well-serviced. Open for negotiations",
-        price: "10,000",
+        price: "100",
     },
     {
         id: 4,

@@ -10,10 +10,10 @@ export default function ItemCard(props) {
             </div>
             <div className="item-card-content">
                 <img src={props.img} alt="placeholder image" />
-                <h3 className="item-name">{props.itemName}</h3>
+                <h2 className="item-name">{props.itemName}</h2>
                 <p className="item-description">{props.itemDescription}</p> 
                 {
-                    props.price && <p className="item-price"><span>Price:</span> {props.price}</p>
+                    props.price && <h3 className="item-price">&#8377;{props.price}</h3>
                 }
             </div>
             <div className="item-card-footer">

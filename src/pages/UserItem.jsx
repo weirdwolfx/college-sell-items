@@ -70,7 +70,12 @@ export default function UserItem(props) {
 
                         <div>
                             <label htmlFor="item-description-input">Item description(0-50 characters)</label>
-                            <textarea name="item-description" id="item-description-input"></textarea>
+                            <textarea 
+                                name="item-description" 
+                                id="item-description-input"
+                                minLength={0}
+                                maxLength={50} 
+                            />
                         </div>
 
                         <div>
