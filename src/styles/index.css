@@ -243,7 +243,7 @@ footer a:hover {
     transform-origin: center;
 }
 
-.add-item-form, .login-form {
+.add-item-form, .login-container {
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -251,7 +251,6 @@ footer a:hover {
     gap: 20px;
     justify-content: center;
     width: 500px;
-    height: 400px;
 }
 
 .add-item-form > div, .login-form > div {
@@ -292,13 +291,13 @@ footer a:hover {
     flex-grow: 1;
 }
 
+.add-item-form .file-input {
+    outline: 1px solid #dfdfe0;
+}
+
 .add-item-button {
     margin-inline: auto;
     margin-bottom: 30px;
-}
-
-input[type='file'] {
-    display: none;
 }
 
 input::placeholder {
@@ -316,6 +315,13 @@ input::placeholder {
 }
 
 /* LOGIN PAGE  */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
 
 .glass {
     background: rgba(255, 255, 255, 0.1);
@@ -359,7 +365,39 @@ input::placeholder {
     display: flex;
 }
 
+
+/* FILE INPUT  */
+
 .file-input > label {
     display: flex;
     align-items: center;
+    margin-block: auto;
+    font-weight: bold;
+}
+
+div.file-input {
+    outline: 1px solid rgb(255,255,255, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 5px 10px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.preview-img-container {
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.preview-img-container > img {
+    object-fit: cover;
+    border-radius: 6px;
+    aspect-ratio: 1/1;
 }

@@ -3,6 +3,7 @@ import React from "react"
 import ItemCard from "../components/ItemCard"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import UploadImg from "../components/UploadImg"
 
 export default function UserItem(props) {
 
@@ -77,13 +78,9 @@ export default function UserItem(props) {
                             <input type="number" id="item-price-input" name="item-price" value="1200" required/>
                         </div>
 
-                        <label htmlFor="item-img-input">Upload image</label>
-                        <input 
-                            type="file"
-                            accept="image/*" 
-                            id="item-img-input"
+                        <UploadImg 
                             name="item-img"
-                            required
+                            title="Upload an image of the item" 
                         />
 
                         <button>Submit</button>
