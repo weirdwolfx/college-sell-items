@@ -1,9 +1,10 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
-import Home from "./pages/Home"
 import UserItem from "./pages/UserItem"
 import Login from "./pages/Login"
+import LostAndFound from "./pages/LostAndFound"
+import Browse from "./pages/Browse"
 
 export default function App() {
 
@@ -28,7 +29,8 @@ export default function App() {
                 } />
                 <Route path="/" element={<Navigate to="/login" replace />} />
                 <Route path="/login" element={<Login user={user} setUser={setUser} />} />
-                <Route path="/:section" element={<Home user={user} />} />
+                <Route path="/browse" element={<Browse user={user} />} />
+                <Route path="/lost-and-found" element={<LostAndFound user={user} />} />
             </Routes>
         </BrowserRouter>
     )

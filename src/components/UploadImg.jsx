@@ -18,6 +18,8 @@ export default function UploadImg(props) {
                 htmlFor="img-input"
                 title={props.title}
                 className="pointer-accessible"
+                tabIndex={0}
+                role="button"
             >
                 <span className="material-symbols-outlined">upload</span>
                 Upload image

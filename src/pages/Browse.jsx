@@ -1,27 +1,18 @@
-import ItemCard from "../components/ItemCard"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+import ItemCardDisplay from "../components/ItemCardDisplay"
 
 import data from "../data/item-sell-data"
 
-export default function Browse() {
-
-    const itemElements = data.map(item => {
-        return (
-            <ItemCard 
-                key={item.id}
-                profilePic={item.profileImg}
-                userName={item.userName}
-                itemDate={item.date}
-                img={item.itemImg}
-                itemName={item.itemName}
-                itemDescription={item.itemDescription}
-                price={item.price}
-            />
-        )
-    })
+export default function Browse(props) {
 
     return (
-        <section className="item-card-container">
-            {itemElements}
-        </section>
+        <>
+            <Header user={props.user} />
+            <main className="home-page">
+                <ItemCardDisplay data={data} />
+            </main>
+            <Footer />
+        </>
     )
 }
