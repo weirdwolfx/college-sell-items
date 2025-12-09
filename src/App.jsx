@@ -17,7 +17,7 @@ export default function App() {
     })
 
     return (
-        <BrowserRouter basename={import.meta.env.BASE_URL}> 
+        <BrowserRouter basename="/college-sell-items"> 
             <Routes>
                 <Route path="/profile/items" element={
                     <UserItem 
